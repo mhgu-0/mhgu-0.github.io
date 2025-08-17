@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Програми — Міжнародний Християнський Гуманітарний Університет. Нові освітні програми з'являться незабаром." />
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/favicon.ico">
+  <title>Програми — Міжнародний Християнський Гуманітарний Університет</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-start: #0f172a; /* slate-900 */
+      --bg-end: #1e293b;   /* slate-800 */
+      --card-bg: rgba(255,255,255,0.06);
+      --card-stroke: rgba(255,255,255,0.12);
+      --accent: #eab308;   /* amber */
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
+    .serif { font-family: 'Playfair Display', Georgia, ui-serif, serif; }
+    .glass { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--card-stroke); }
+    .grad-bg { background: radial-gradient(1200px 600px at 10% -10%, #33415533, transparent), linear-gradient(160deg, var(--bg-start), var(--bg-end)); }
+    .badge { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); }
+  </style>
+</head>
+<body class="grad-bg text-slate-100 min-h-screen flex flex-col">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="На головну">
+        <div class="size-9 rounded-xl bg-white/10 grid place-items-center group-hover:bg-white/20 transition"><span class="serif text-lg">МХ</span></div>
+        <div class="leading-tight">
+          <div class="font-semibold" data-lang="uk">Міжнародний Християнський Гуманітарний Університет</div>
+          <div class="font-semibold hidden" data-lang="en">International Christian Humanitarian University</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1" aria-label="Основна навігація"><a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Про нас</a>
+<a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">About</a>
+<a href="programs.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold" data-lang="uk">Програми</a>
+<a href="programs.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold hidden" data-lang="en">Programs</a>
+<a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Абітурієнту</a>
+<a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Admissions</a>
+<a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Проєкти</a>
+<a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Projects</a>
+<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Новини</a>
+<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">News</a>
+<a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Умови навчання</a>
+<a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Study Terms</a>
+<div class="w-px h-6 bg-white/10 mx-1" aria-hidden="true"></div>
+<div class="flex items-center gap-1 glass rounded-xl p-1" role="group" aria-label="Перемикач мови">
+  <button id="btn-uk" type="button" class="px-3 py-1.5 text-xs rounded-lg bg-white/10 font-semibold" aria-pressed="true">UA</button>
+  <button id="btn-en" type="button" class="px-3 py-1.5 text-xs rounded-lg hover:bg-white/10" aria-pressed="false">EN</button>
+</div>
+</nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative pt-20 md:pt-24 pb-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="glass rounded-3xl p-6 md:p-10 text-center">
+        <h1 class="serif text-4xl md:text-5xl font-bold mb-2" data-lang="uk">Програми</h1>
+        <h1 class="serif text-4xl md:text-5xl font-bold mb-2 hidden" data-lang="en">Programs</h1>
+        <p class="text-slate-300" data-lang="uk">Ми готуємо до запуску нові освітні програми. Будь ласка, слідкуйте за оновленнями — найближчим часом тут з’являться деталі.</p>
+        <p class="text-slate-300 hidden" data-lang="en">We are preparing new academic programs. Please check back soon — details will appear here shortly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon Cards -->
+  <section class="py-4">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-4">
+      <article class="glass rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="serif text-xl font-bold" data-lang="uk">Теологія</h2>
+          <h2 class="serif text-xl font-bold hidden" data-lang="en">Theology</h2>
+          <span class="badge text-xs px-2 py-1 rounded-lg">soon</span>
+        </div>
+        <p class="text-slate-300 text-sm" data-lang="uk">Поглиблене вивчення Святого Письма, історії Церкви та християнської етики. Опис програми з’явиться найближчим часом.</p>
+        <p class="text-slate-300 text-sm hidden" data-lang="en">In-depth study of Scripture, Church history, and Christian ethics. Full description coming soon.</p>
+      </article>
+
+      <article class="glass rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="serif text-xl font-bold" data-lang="uk">Християнська педагогіка</h2>
+          <h2 class="serif text-xl font-bold hidden" data-lang="en">Christian Pedagogy</h2>
+          <span class="badge text-xs px-2 py-1 rounded-lg">soon</span>
+        </div>
+        <p class="text-slate-300 text-sm" data-lang="uk">Підготовка вчителів, які служать вірою і любов’ю. Деталі програми буде опубліковано після затвердження.</p>
+        <p class="text-slate-300 text-sm hidden" data-lang="en">Training teachers who serve through faith and love. Program details will be published after approval.</p>
+      </article>
+
+      <article class="glass rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="serif text-xl font-bold" data-lang="uk">Соціальна робота</h2>
+          <h2 class="serif text-xl font-bold hidden" data-lang="en">Social Work</h2>
+          <span class="badge text-xs px-2 py-1 rounded-lg">soon</span>
+        </div>
+        <p class="text-slate-300 text-sm" data-lang="uk">Служіння громадам та підтримка потребуючих. Опис і навчальний план опублікуємо згодом.</p>
+        <p class="text-slate-300 text-sm hidden" data-lang="en">Serving communities and supporting those in need. Description and curriculum to follow.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-2">
+    <div class="max-w-6xl mx-auto px-4 glass rounded-2xl p-6 md:p-8">
+      <div class="grid md:grid-cols-2 gap-4 items-center">
+        <div>
+          <h3 class="serif text-2xl font-bold mb-2" data-lang="uk">Хочете дізнатися першими?</h3>
+          <h3 class="serif text-2xl font-bold mb-2 hidden" data-lang="en">Want to be the first to know?</h3>
+          <p class="text-slate-300 text-sm" data-lang="uk">Напишіть нам на <a href="mailto:mhgu.org@gmail.com" class="underline text-amber-300">mhgu.org@gmail.com</a> або залиште заявку — і ми повідомимо, щойно відкриється набір.</p>
+          <p class="text-slate-300 text-sm hidden" data-lang="en">Email us at <a href="mailto:mhgu.org@gmail.com" class="underline text-amber-300">mhgu.org@gmail.com</a> or submit an application — we’ll notify you as soon as admissions open.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="admissions.html#apply" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 glass hover:bg-white/10 transition">
+            <span data-lang="uk">Залишити заявку</span><span class="hidden" data-lang="en">Submit application</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 opacity-80"><path d="M13.5 4.5a.75.75 0 000 1.5h4.19l-9.72 9.72a.75.75 0 101.06 1.06l9.72-9.72v4.19a.75.75 0 001.5 0v-6.75a.75.75 0 00-.75-.75h-6.75z"/></svg>
+          </a>
+          <a href="news.html" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 glass hover:bg-white/10 transition">
+            <span data-lang="uk">Дивитися новини</span><span class="hidden" data-lang="en">View news</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-sm text-slate-400 flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> <span data-lang="uk">Міжнародний Християнський Гуманітарний Університет</span><span class="hidden" data-lang="en">International Christian Humanitarian University</span></div>
+      <div class="flex items-center gap-3">
+        <a href="news.html" class="hover:text-slate-200" data-lang="uk">Новини</a>
+        <a href="news.html" class="hover:text-slate-200 hidden" data-lang="en">News</a>
+        <span class="opacity-30" aria-hidden="true">•</span>
+        <a href="terms.html" class="hover:text-slate-200" data-lang="uk">Умови навчання</a>
+        <a href="terms.html" class="hover:text-slate-200 hidden" data-lang="en">Study Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== I18N toggle =====
+    const els = Array.from(document.querySelectorAll('[data-lang]'));
+    const btnUK = document.getElementById('btn-uk');
+    const btnEN = document.getElementById('btn-en');
+    function getInitialLang() {
+      const url = new URL(window.location.href);
+      const qs = url.searchParams.get('lang');
+      if (qs === 'uk' || qs === 'en') return qs;
+      const stored = localStorage.getItem('lang');
+      if (stored === 'uk' || stored === 'en') return stored;
+      return 'uk';
+    }
+    function setLang(lang, pushState = true) {
+      const clamped = (lang === 'en') ? 'en' : 'uk';
+      localStorage.setItem('lang', clamped);
+      if (pushState) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', clamped);
+        history.replaceState(null, '', url.toString());
+      }
+      els.forEach(el => el.classList.toggle('hidden', el.getAttribute('data-lang') !== clamped));
+      if (btnUK && btnEN) {
+        btnUK.classList.toggle('bg-white/10', clamped === 'uk');
+        btnUK.classList.toggle('font-semibold', clamped === 'uk');
+        btnUK.setAttribute('aria-pressed', String(clamped === 'uk'));
+        btnEN.classList.toggle('bg-white/10', clamped === 'en');
+        btnEN.classList.toggle('font-semibold', clamped === 'en');
+        btnEN.setAttribute('aria-pressed', String(clamped === 'en'));
+      }
+      document.documentElement.lang = (clamped === 'uk') ? 'uk' : 'en';
+      document.title = (clamped === 'uk')
+        ? 'Програми — Міжнародний Християнський Гуманітарний Університет'
+        : 'Programs — International Christian Humanitarian University';
+    }
+    if (btnUK && btnEN) {
+      btnUK.addEventListener('click', () => setLang('uk'));
+      btnEN.addEventListener('click', () => setLang('en'));
+    }
+    setLang(getInitialLang(), false);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

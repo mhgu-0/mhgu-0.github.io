@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Новини — Міжнародний Християнський Гуманітарний Університет. Офіційні оголошення та події." />
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/favicon.ico">
+  <title>Новини — Міжнародний Християнський Гуманітарний Університет</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-start: #0f172a; /* slate-900 */
+      --bg-end: #1e293b;   /* slate-800 */
+      --card-bg: rgba(255,255,255,0.06);
+      --card-stroke: rgba(255,255,255,0.12);
+      --accent: #eab308;   /* amber */
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans'; }
+    .serif { font-family: 'Playfair Display', Georgia, ui-serif, serif; }
+    .glass { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--card-stroke); }
+    .grad-bg { background: radial-gradient(1200px 600px at 10% -10%, #33415533, transparent), linear-gradient(160deg, var(--bg-start), var(--bg-end)); }
+    .badge { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); }
+  </style>
+</head>
+<body class="grad-bg text-slate-100 min-h-screen flex flex-col">
+  <!-- Header / Nav (unified) -->
+  <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="На головну">
+        <div class="size-9 rounded-xl bg-white/10 grid place-items-center group-hover:bg-white/20 transition"><span class="serif text-lg">МХ</span></div>
+        <div class="leading-tight">
+          <div class="font-semibold" data-lang="uk">Міжнародний Християнський Гуманітарний Університет</div>
+          <div class="font-semibold hidden" data-lang="en">International Christian Humanitarian University</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1" aria-label="Основна навігація">
+        <a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Про нас</a>
+        <a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">About</a>
+        <a href="programs.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Програми</a>
+        <a href="programs.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Programs</a>
+        <a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Абітурієнту</a>
+        <a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Admissions</a>
+        <a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Проєкти</a>
+        <a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Projects</a>
+        <a href="news.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold" data-lang="uk">Новини</a>
+        <a href="news.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold hidden" data-lang="en">News</a>
+        <a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Умови навчання</a>
+        <a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Study Terms</a>
+        <div class="w-px h-6 bg-white/10 mx-1" aria-hidden="true"></div>
+        <div class="flex items-center gap-1 glass rounded-xl p-1" role="group" aria-label="Перемикач мови">
+          <button id="btn-uk" type="button" class="px-3 py-1.5 text-xs rounded-lg bg-white/10 font-semibold" aria-pressed="true">UA</button>
+          <button id="btn-en" type="button" class="px-3 py-1.5 text-xs rounded-lg hover:bg-white/10" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero (matched with Programs) -->
+  <section class="relative pt-20 md:pt-24 pb-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="glass rounded-3xl p-6 md:p-10 text-center">
+        <h1 class="serif text-4xl md:text-5xl font-bold mb-2" data-lang="uk">Новини</h1>
+        <h1 class="serif text-4xl md:text-5xl font-bold mb-2 hidden" data-lang="en">News</h1>
+        <p class="text-slate-300" data-lang="uk">Офіційні оголошення та події університету. Слідкуйте за оновленнями.</p>
+        <p class="text-slate-300 hidden" data-lang="en">Official announcements and university events. Stay tuned for updates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- News list -->
+  <main class="flex-1">
+    <div class="max-w-6xl mx-auto px-4 pb-16">
+      <div class="grid gap-6 md:gap-8">
+        <!-- 1. Скіфська місія -->
+        <article class="glass rounded-2xl p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h2 class="serif text-2xl md:text-3xl font-bold" data-lang="uk">📰 Оголошення — «Скіфська місія: Шлях Апостола Андрія»</h2>
+            <h2 class="serif text-2xl md:text-3xl font-bold hidden" data-lang="en">📰 Announcement — "Scythian Mission: Apostle Andrew’s Path"</h2>
+            <span class="px-3 py-1 text-xs rounded-full border border-white/20 text-slate-300">📅 17 серпня 2025</span>
+            <span class="px-3 py-1 text-xs rounded-full border border-white/20 text-slate-300 hidden">📅 17 August 2025</span>
+          </div>
+          <p class="mt-4 text-slate-300" data-lang="uk">
+            Запрошуємо всіх бажаючих доєднатися до експедиції нашого університету, метою якої є пошук артефактів, що підтверджують перебування Апостола Андрія Первозванного на території Скіфії (сучасна Україна). Проєкт отримав назву «Скіфська місія».
+          </p>
+          <p class="mt-4 text-slate-300 hidden" data-lang="en">
+            We invite everyone to join our university expedition to search for artifacts that may confirm Apostle Andrew the First-Called's presence in Scythia (modern Ukraine). The project is titled "Scythian Mission."
+          </p>
+          <p class="mt-3 text-slate-300" data-lang="uk">📩 Прохання до всіх бажаючих звертатися на електронну пошту університету.</p>
+          <p class="mt-3 text-slate-300 hidden" data-lang="en">📩 Those interested are asked to contact the university by email.</p>
+        </article>
+
+        <!-- 2. День відкритих дверей -->
+        <article class="glass rounded-2xl p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h2 class="serif text-2xl md:text-3xl font-bold" data-lang="uk">День відкритих дверей у МХГУ</h2>
+            <h2 class="serif text-2xl md:text-3xl font-bold hidden" data-lang="en">Open Day at ICHU</h2>
+            <span class="px-3 py-1 text-xs rounded-full border border-white/20 text-slate-300">📅 5 вересня 2025</span>
+            <span class="px-3 py-1 text-xs rounded-full border border-white/20 text-slate-300 hidden">📅 5 September 2025</span>
+          </div>
+          <p class="mt-4 text-slate-300" data-lang="uk">
+            Запрошуємо абітурієнтів та їх батьків на зустріч із викладачами та студентами університету.
+            На заході ви дізнаєтеся про програми навчання, умови вступу та зможете поставити запитання адміністрації.
+          </p>
+          <p class="mt-4 text-slate-300 hidden" data-lang="en">
+            Prospective students and their parents are invited to meet our faculty and students.
+            Learn about programs, admissions, and ask the administration your questions.
+          </p>
+          <p class="mt-3 text-slate-300" data-lang="uk">📍 Актова зала університету</p>
+          <p class="mt-3 text-slate-300 hidden" data-lang="en">📍 University Assembly Hall</p>
+        </article>
+
+        <!-- 3. Магістратура -->
+        <article class="glass rounded-2xl p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h2 class="serif text-2xl md:text-3xl font-bold" data-lang="uk">Початок набору на магістерські програми</h2>
+            <h2 class="serif text-2xl md:text-3xl font-bold hidden" data-lang="en">Master’s Admissions Open</h2>
+            <span class="px-3 py-1 text-xs rounded-full border border-white/20 text-slate-300">📅 10 вересня 2025</span>
+            <span class="px-3 py-1 text-xs rounded-full border border-white/20 text-slate-300 hidden">📅 10 September 2025</span>
+          </div>
+          <p class="mt-4 text-slate-300" data-lang="uk">
+            Університет відкриває набір студентів на магістратуру з напрямів гуманітарних наук та міжнародних відносин.
+            Приймаються документи від студентів, які завершили бакалаврат у будь-якому акредитованому закладі.
+          </p>
+          <p class="mt-4 text-slate-300 hidden" data-lang="en">
+            The university opens admissions to master’s programs in the humanities and international relations.
+            Applications are accepted from graduates of any accredited institution.
+          </p>
+          <p class="mt-3 text-slate-300" data-lang="uk">📩 Подати заявку можна через <a class="underline text-amber-300" href="admissions.html#apply">онлайн-форму</a> на сайті.</p>
+          <p class="mt-3 text-slate-300 hidden" data-lang="en">📩 You can apply via the site’s <a class="underline text-amber-300" href="admissions.html#apply">online form</a>.</p>
+        </article>
+
+        <!-- 4. Християнська педагогіка -->
+        <article class="glass rounded-2xl p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h2 class="serif text-2xl md:text-3xl font-bold" data-lang="uk">МХГУ відкриває програму з християнської педагогіки</h2>
+            <h2 class="serif text-2xl md:text-3xl font-bold hidden" data-lang="en">ICHU Launches Christian Pedagogy Program</h2>
+            <span class="px-3 py-1 text-xs rounded-full border border-white/20 text-slate-300">📅 15 вересня 2025</span>
+            <span class="px-3 py-1 text-xs rounded-full border border-white/20 text-slate-300 hidden">📅 15 September 2025</span>
+          </div>
+          <p class="mt-4 text-slate-300" data-lang="uk">
+            Мета — підготувати вчителів, які несуть світло у майбутнє покоління через віру та любов.
+          </p>
+          <p class="mt-4 text-slate-300 hidden" data-lang="en">
+            The goal is to prepare teachers who bring light to the next generation through faith and love.
+          </p>
+          <p class="mt-3 text-slate-300" data-lang="uk">📩 Дізнатися більше можна через форму заявки або звернувшись до приймальної комісії.</p>
+          <p class="mt-3 text-slate-300 hidden" data-lang="en">📩 Learn more via the application form or by contacting the admissions office.</p>
+        </article>
+      </div>
+
+      <!-- Back/CTA -->
+      <div class="mt-10 text-center">
+        <a href="index.html" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 glass hover:bg-white/10 transition">
+          <span data-lang="uk">На головну</span><span class="hidden" data-lang="en">Back to Home</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-sm text-slate-400 flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> <span data-lang="uk">Міжнародний Християнський Гуманітарний Університет</span><span class="hidden" data-lang="en">International Christian Humanitarian University</span></div>
+      <div class="flex items-center gap-3">
+        <a href="news.html" class="hover:text-slate-200" data-lang="uk">Новини</a>
+        <a href="news.html" class="hover:text-slate-200 hidden" data-lang="en">News</a>
+        <span class="opacity-30" aria-hidden="true">•</span>
+        <a href="terms.html" class="hover:text-slate-200" data-lang="uk">Умови навчання</a>
+        <a href="terms.html" class="hover:text-slate-200 hidden" data-lang="en">Study Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // I18N toggle
+    const els = Array.from(document.querySelectorAll('[data-lang]'));
+    const btnUK = document.getElementById('btn-uk');
+    const btnEN = document.getElementById('btn-en');
+    function getInitialLang() {
+      const url = new URL(window.location.href);
+      const qs = url.searchParams.get('lang');
+      if (qs === 'uk' || qs === 'en') return qs;
+      const stored = localStorage.getItem('lang');
+      if (stored === 'uk' || stored === 'en') return stored;
+      return 'uk';
+    }
+    function setLang(lang, pushState = true) {
+      const clamped = (lang === 'en') ? 'en' : 'uk';
+      localStorage.setItem('lang', clamped);
+      if (pushState) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', clamped);
+        history.replaceState(null, '', url.toString());
+      }
+      els.forEach(el => el.classList.toggle('hidden', el.getAttribute('data-lang') !== clamped));
+      if (btnUK && btnEN) {
+        btnUK.classList.toggle('bg-white/10', clamped === 'uk');
+        btnUK.classList.toggle('font-semibold', clamped === 'uk');
+        btnUK.setAttribute('aria-pressed', String(clamped === 'uk'));
+        btnEN.classList.toggle('bg-white/10', clamped === 'en');
+        btnEN.classList.toggle('font-semibold', clamped === 'en');
+        btnEN.setAttribute('aria-pressed', String(clamped === 'en'));
+      }
+      document.documentElement.lang = (clamped === 'uk') ? 'uk' : 'en';
+      document.title = (clamped === 'uk')
+        ? 'Новини — Міжнародний Християнський Гуманітарний Університет'
+        : 'News — International Christian Humanitarian University';
+    }
+    if (btnUK && btnEN) {
+      btnUK.addEventListener('click', () => setLang('uk'));
+      btnEN.addEventListener('click', () => setLang('en'));
+    }
+    setLang(getInitialLang(), false);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

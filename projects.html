@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Проєкти Міжнародного Християнського Гуманітарного Університету. Наукові, культурні та освітні ініціативи." />
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/favicon.ico">
+  <title>Проєкти — Міжнародний Християнський Гуманітарний Університет</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-start: #0f172a; /* slate-900 */
+      --bg-end: #1e293b;   /* slate-800 */
+      --card-bg: rgba(255,255,255,0.06);
+      --card-stroke: rgba(255,255,255,0.12);
+      --accent: #eab308;   /* amber */
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
+    .serif { font-family: 'Playfair Display', Georgia, ui-serif, serif; }
+    .glass { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--card-stroke); }
+    .grad-bg { background: radial-gradient(1200px 600px at 10% -10%, #33415533, transparent), linear-gradient(160deg, var(--bg-start), var(--bg-end)); }
+    .badge { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); }
+  </style>
+</head>
+<body class="grad-bg text-slate-100 min-h-screen flex flex-col">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="На головну">
+        <div class="size-9 rounded-xl bg-white/10 grid place-items-center group-hover:bg-white/20 transition"><span class="serif text-lg">МХ</span></div>
+        <div class="leading-tight">
+          <div class="font-semibold" data-lang="uk">Міжнародний Християнський Гуманітарний Університет</div>
+          <div class="font-semibold hidden" data-lang="en">International Christian Humanitarian University</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1" aria-label="Основна навігація"><a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Про нас</a>
+<a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">About</a>
+<a href="programs.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Програми</a>
+<a href="programs.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Programs</a>
+<a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Абітурієнту</a>
+<a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Admissions</a>
+<a href="projects.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold" data-lang="uk">Проєкти</a>
+<a href="projects.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold hidden" data-lang="en">Projects</a>
+<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Новини</a>
+<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">News</a>
+<a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Умови навчання</a>
+<a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Study Terms</a>
+<div class="w-px h-6 bg-white/10 mx-1" aria-hidden="true"></div>
+<div class="flex items-center gap-1 glass rounded-xl p-1" role="group" aria-label="Перемикач мови">
+  <button id="btn-uk" type="button" class="px-3 py-1.5 text-xs rounded-lg bg-white/10 font-semibold" aria-pressed="true">UA</button>
+  <button id="btn-en" type="button" class="px-3 py-1.5 text-xs rounded-lg hover:bg-white/10" aria-pressed="false">EN</button>
+</div>
+</nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative pt-20 md:pt-24 pb-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="glass rounded-3xl p-6 md:p-10">
+        <h1 class="serif text-4xl md:text-5xl font-bold mb-3" data-lang="uk">Проєкти</h1>
+        <h1 class="serif text-4xl md:text-5xl font-bold mb-3 hidden" data-lang="en">Projects</h1>
+        <p class="text-slate-300 max-w-3xl" data-lang="uk">Наукові, культурні та освітні ініціативи університету. За додатковою інформацією пишіть на <a href="mailto:mhgu.org@gmail.com" class="underline text-amber-300">mhgu.org@gmail.com</a>.</p>
+        <p class="text-slate-300 max-w-3xl hidden" data-lang="en">University-led scientific, cultural, and educational initiatives. For more information, email <a href="mailto:mhgu.org@gmail.com" class="underline text-amber-300">mhgu.org@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Card -->
+  <main class="flex-1">
+    <div class="max-w-6xl mx-auto px-4 pb-16">
+      <article id="scythian-mission" class="glass rounded-3xl p-6 md:p-10" itemscope itemtype="https://schema.org/Project">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <h2 class="serif text-3xl md:text-4xl font-bold" itemprop="name" data-lang="uk">Проєкт «Скіфська місія: Шлях Апостола Андрія»</h2>
+          <h2 class="serif text-3xl md:text-4xl font-bold hidden" itemprop="name" data-lang="en">Project “Scythian Mission: The Path of Apostle Andrew”</h2>
+          <span class="badge text-xs px-2 py-1 rounded-lg">активний</span>
+        </div>
+
+        <!-- Intro -->
+        <section class="mt-2">
+          <h3 class="serif text-xl font-bold mb-2" data-lang="uk">Вступ</h3>
+          <h3 class="serif text-xl font-bold mb-2 hidden" data-lang="en">Introduction</h3>
+          <p class="text-slate-300" itemprop="description" data-lang="uk">
+            Університет оголошує старт масштабного науково-культурного проєкту, покликаного відкрити нову сторінку в історії України та всієї Європи.
+            «Скіфська місія» — це не просто експедиція. Це велика ініціатива, метою якої є пошук безцінних артефактів, що можуть підтвердити перебування на нашій землі Апостола Андрія Первозванного — одного з перших учнів Христа, провісника християнства і духовного патрона України.
+          </p>
+          <p class="text-slate-300 hidden" data-lang="en">
+            The University launches a large-scale scholarly and cultural project to open a new page in the history of Ukraine and Europe.
+            “Scythian Mission” is more than an expedition: it seeks priceless artifacts that may confirm the presence of Apostle Andrew the First-Called on our lands — one of Christ’s first disciples and a spiritual patron of Ukraine.
+          </p>
+        </section>
+
+        <!-- Goals -->
+        <section class="mt-6">
+          <h3 class="serif text-xl font-bold mb-2" data-lang="uk">Мета проєкту</h3>
+          <h3 class="serif text-xl font-bold mb-2 hidden" data-lang="en">Project Goals</h3>
+          <ul class="list-disc list-inside text-slate-300 space-y-1">
+            <li data-lang="uk">Провести археологічні дослідження на території історичної Скіфії (сучасна Україна).</li>
+            <li data-lang="uk">Виявити та зберегти унікальні знахідки, які можуть стати доказом подорожей Апостола Андрія.</li>
+            <li data-lang="uk">Поглибити розуміння духовних витоків української культури.</li>
+            <li data-lang="uk">Показати світу роль нашої землі як місця народження великих ідей.</li>
+
+            <li class="hidden" data-lang="en">Conduct archaeological research within the historic Scythian region (present-day Ukraine).</li>
+            <li class="hidden" data-lang="en">Discover and preserve unique findings that may evidence Apostle Andrew’s journeys.</li>
+            <li class="hidden" data-lang="en">Deepen understanding of the spiritual roots of Ukrainian culture.</li>
+            <li class="hidden" data-lang="en">Show the world our land’s role as a cradle of great ideas.</li>
+          </ul>
+        </section>
+
+        <!-- Significance -->
+        <section class="mt-6">
+          <h3 class="serif text-xl font-bold mb-2" data-lang="uk">Значення</h3>
+          <h3 class="serif text-xl font-bold mb-2 hidden" data-lang="en">Significance</h3>
+          <p class="text-slate-300" data-lang="uk">
+            «Скіфська місія» — подія міжнародного масштабу. Вона об’єднає археологів, істориків, богословів, митців та меценатів.
+            Проєкт стане символом духовного відродження та наукового поступу, адже його результати здатні змінити уявлення про місце України в історії християнства та європейської цивілізації.
+          </p>
+          <p class="text-slate-300 hidden" data-lang="en">
+            “Scythian Mission” is of international importance, bringing together archaeologists, historians, theologians, artists, and patrons.
+            It symbolizes spiritual renewal and scientific progress; its results may reshape how we view Ukraine’s place in the history of Christianity and European civilization.
+          </p>
+        </section>
+
+        <!-- Participation -->
+        <section class="mt-6">
+          <h3 class="serif text-xl font-bold mb-2" data-lang="uk">Участь</h3>
+          <h3 class="serif text-xl font-bold mb-2 hidden" data-lang="en">Participation</h3>
+          <p class="text-slate-300" data-lang="uk">
+            Ми запрошуємо долучитися до ініціативи всіх, хто мріє стати частиною великої справи: науковців, студентів, дослідників, волонтерів та всіх небайдужих.
+            <br/>📩 Заявки та питання надсилайте на офіційну електронну пошту університету — <a href="mailto:mhgu.org@gmail.com" class="underline text-amber-300">mhgu.org@gmail.com</a> — або скористайтесь формою на сторінці <a href="admissions.html#apply" class="underline text-amber-300">«Абітурієнту»</a>.
+          </p>
+          <p class="text-slate-300 hidden" data-lang="en">
+            We invite all who wish to be part of this work — scholars, students, researchers, volunteers, and supporters.
+            <br/>📩 Send applications and questions to the official email — <a href="mailto:mhgu.org@gmail.com" class="underline text-amber-300">mhgu.org@gmail.com</a> — or use the form on the <a href="admissions.html#apply" class="underline text-amber-300">Admissions</a> page.
+          </p>
+          <div class="mt-4 flex flex-wrap items-center gap-3">
+            <a href="admissions.html#apply" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 glass hover:bg-white/10 transition">
+              <span data-lang="uk">Подати заявку</span><span class="hidden" data-lang="en">Apply now</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 opacity-80"><path d="M13.5 4.5a.75.75 0 000 1.5h4.19l-9.72 9.72a.75.75 0 101.06 1.06l9.72-9.72v4.19a.75.75 0 001.5 0v-6.75a.75.75 0 00-.75-.75h-6.75z"/></svg>
+            </a>
+            <a href="news.html" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 glass hover:bg-white/10 transition">
+              <span data-lang="uk">Новини про проєкт</span><span class="hidden" data-lang="en">Project news</span>
+            </a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-sm text-slate-400 flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> <span data-lang="uk">Міжнародний Християнський Гуманітарний Університет</span><span class="hidden" data-lang="en">International Christian Humanitarian University</span></div>
+      <div class="flex items-center gap-3">
+        <a href="news.html" class="hover:text-slate-200" data-lang="uk">Новини</a>
+        <a href="news.html" class="hover:text-slate-200 hidden" data-lang="en">News</a>
+        <span class="opacity-30" aria-hidden="true">•</span>
+        <a href="terms.html" class="hover:text-slate-200" data-lang="uk">Умови навчання</a>
+        <a href="terms.html" class="hover:text-slate-200 hidden" data-lang="en">Study Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== I18N toggle =====
+    const els = Array.from(document.querySelectorAll('[data-lang]'));
+    const btnUK = document.getElementById('btn-uk');
+    const btnEN = document.getElementById('btn-en');
+    function getInitialLang() {
+      const url = new URL(window.location.href);
+      const qs = url.searchParams.get('lang');
+      if (qs === 'uk' || qs === 'en') return qs;
+      const stored = localStorage.getItem('lang');
+      if (stored === 'uk' || stored === 'en') return stored;
+      return 'uk';
+    }
+    function setLang(lang, pushState = true) {
+      const clamped = (lang === 'en') ? 'en' : 'uk';
+      localStorage.setItem('lang', clamped);
+      if (pushState) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', clamped);
+        history.replaceState(null, '', url.toString());
+      }
+      els.forEach(el => el.classList.toggle('hidden', el.getAttribute('data-lang') !== clamped));
+      if (btnUK && btnEN) {
+        btnUK.classList.toggle('bg-white/10', clamped === 'uk');
+        btnUK.classList.toggle('font-semibold', clamped === 'uk');
+        btnUK.setAttribute('aria-pressed', String(clamped === 'uk'));
+        btnEN.classList.toggle('bg-white/10', clamped === 'en');
+        btnEN.classList.toggle('font-semibold', clamped === 'en');
+        btnEN.setAttribute('aria-pressed', String(clamped === 'en'));
+      }
+      document.documentElement.lang = (clamped === 'uk') ? 'uk' : 'en';
+      document.title = (clamped === 'uk')
+        ? 'Проєкти — Міжнародний Християнський Гуманітарний Університет'
+        : 'Projects — International Christian Humanitarian University';
+    }
+    if (btnUK && btnEN) {
+      btnUK.addEventListener('click', () => setLang('uk'));
+      btnEN.addEventListener('click', () => setLang('en'));
+    }
+    setLang(getInitialLang(), false);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

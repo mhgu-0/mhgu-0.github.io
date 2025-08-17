@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Умови навчання Міжнародного Християнського Гуманітарного Університету: контракт чи безкоштовне навчання з можливими додатковими витратами." />
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/favicon.ico">
+  <title>Умови навчання — Міжнародний Християнський Гуманітарний Університет</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-start: #0f172a; /* slate-900 */
+      --bg-end: #1e293b;   /* slate-800 */
+      --card-bg: rgba(255,255,255,0.06);
+      --card-stroke: rgba(255,255,255,0.12);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
+    .serif { font-family: 'Playfair Display', Georgia, ui-serif, serif; }
+    .glass { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--card-stroke); }
+    .grad-bg { background: radial-gradient(1200px 600px at 10% -10%, #33415533, transparent), linear-gradient(160deg, var(--bg-start), var(--bg-end)); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    noscript .no-js-note { display: block; }
+    .success { background: #14532D; }
+    .error { background: #7F1D1D; }
+  </style>
+</head>
+<body class="grad-bg text-slate-100 min-h-screen flex flex-col">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="На головну Міжнародного Християнського Гуманітарного Університету">
+        <div class="size-9 rounded-xl bg-white/10 grid place-items-center group-hover:bg-white/20 transition"><span class="serif text-lg">МХ</span></div>
+        <div class="leading-tight">
+          <div class="font-semibold" data-lang="uk">Міжнародний Християнський Гуманітарний Університет</div>
+          <div class="font-semibold hidden" data-lang="en">International Christian Humanitarian University</div>
+        </div>
+      </a>
+
+      <nav class="flex items-center gap-1" aria-label="Основна навігація"><a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Про нас</a>
+<a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">About</a>
+<a href="programs.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Програми</a>
+<a href="programs.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Programs</a>
+<a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Абітурієнту</a>
+<a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Admissions</a>
+<a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Проєкти</a>
+<a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Projects</a>
+<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Новини</a>
+<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">News</a>
+<a href="terms.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold" data-lang="uk">Умови навчання</a>
+<a href="terms.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold hidden" data-lang="en">Study Terms</a>
+<div class="w-px h-6 bg-white/10 mx-1" aria-hidden="true"></div>
+<div class="flex items-center gap-1 glass rounded-xl p-1" role="group" aria-label="Перемикач мови">
+  <button id="btn-uk" type="button" class="px-3 py-1.5 text-xs rounded-lg bg-white/10 font-semibold" aria-pressed="true">UA</button>
+  <button id="btn-en" type="button" class="px-3 py-1.5 text-xs rounded-lg hover:bg-white/10" aria-pressed="false">EN</button>
+</div>
+</nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="max-w-6xl mx-auto px-4 pt-12 pb-8">
+      <h1 class="serif text-4xl md:text-5xl font-bold mb-4" data-lang="uk">Умови навчання</h1>
+      <h1 class="serif text-4xl md:text-5xl font-bold mb-4 hidden" data-lang="en">Study Terms</h1>
+      <p class="text-slate-300 max-w-3xl" data-lang="uk">
+        Оберіть зручний формат: контрактна основа з фіксованою оплатою або безкоштовне навчання з можливими додатковими витратами.
+      </p>
+      <p class="text-slate-300 max-w-3xl hidden" data-lang="en">
+        Choose your path: a fixed-price contract program or a free-tuition track with potential ancillary fees.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <main class="flex-1">
+    <div class="max-w-6xl mx-auto px-4 pb-16">
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <!-- Contract -->
+        <article class="glass rounded-2xl p-6 md:p-8 relative overflow-hidden">
+          <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-emerald-400/10 blur-2xl" aria-hidden="true"></div>
+          <div class="flex items-start justify-between gap-4">
+            <h2 class="serif text-2xl md:text-3xl font-bold" data-lang="uk">Варіант I — Контракт</h2>
+            <h2 class="serif text-2xl md:text-3xl font-bold hidden" data-lang="en">Option I — Contract</h2>
+            <span class="px-3 py-1 text-xs rounded-full border border-emerald-400/30 text-emerald-300" aria-label="Вартість 500 доларів на рік">
+              <data value="500">500</data> $ / <span data-lang="uk">рік</span><span class="hidden" data-lang="en">year</span>
+            </span>
+          </div>
+          <p class="mt-4 text-slate-300" data-lang="uk">
+            Фіксована оплата за навчальний рік. У вартість входить усе необхідне для навчання. Додаткові платежі відсутні.
+          </p>
+          <p class="mt-4 text-slate-300 hidden" data-lang="en">
+            Fixed annual payment. The price covers all essentials for your program. No extra fees.
+          </p>
+
+          <ul class="mt-6 space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span aria-hidden="true">✅</span><span data-lang="uk">Прозора та зрозуміла ціна</span><span class="hidden" data-lang="en">Clear, predictable pricing</span></li>
+            <li class="flex items-center gap-2"><span aria-hidden="true">✅</span><span data-lang="uk">Без прихованих платежів</span><span class="hidden" data-lang="en">No hidden fees</span></li>
+            <li class="flex items-center gap-2"><span aria-hidden="true">✅</span><span data-lang="uk">Оплата один раз на рік</span><span class="hidden" data-lang="en">One payment per year</span></li>
+          </ul>
+        </article>
+
+        <!-- Free Tuition with fees -->
+        <article class="glass rounded-2xl p-6 md:p-8 relative overflow-hidden">
+          <div class="absolute -left-10 -bottom-10 w-40 h-40 rounded-full bg-cyan-400/10 blur-2xl" aria-hidden="true"></div>
+          <div class="flex items-start justify-between gap-4">
+            <h2 class="serif text-2xl md:text-3xl font-bold" data-lang="uk">Варіант II — Безкоштовне навчання</h2>
+            <h2 class="serif text-2xl md:text-3xl font-bold hidden" data-lang="en">Option II — Free Tuition</h2>
+            <span class="px-3 py-1 text-xs rounded-full border border-cyan-400/30 text-cyan-300" data-lang="uk" aria-label="Навчання — нуль доларів">
+              <data value="0">0</data> $
+            </span>
+            <span class="px-3 py-1 text-xs rounded-full border border-cyan-400/30 text-cyan-300 hidden" data-lang="en" aria-label="Tuition — zero dollars">
+              <data value="0">0</data> $
+            </span>
+          </div>
+          <p class="mt-4 text-slate-300" data-lang="uk">Навчання безкоштовне, але можливі додаткові витрати:</p>
+          <p class="mt-4 text-slate-300 hidden" data-lang="en">Tuition is free, but these ancillary fees may apply:</p>
+
+          <div class="mt-5 overflow-hidden rounded-xl border border-white/10">
+            <table class="w-full text-sm">
+              <caption class="sr-only" data-lang="uk">Перелік можливих додаткових витрат</caption>
+              <caption class="sr-only hidden" data-lang="en">List of possible ancillary fees</caption>
+              <tbody class="divide-y divide-white/10">
+                <tr>
+                  <th scope="row" class="px-4 py-3 text-left text-slate-300 font-medium" data-lang="uk">Студентський квиток</th>
+                  <th scope="row" class="px-4 py-3 text-left text-slate-300 font-medium hidden" data-lang="en">Student ID card</th>
+                  <td class="px-4 py-3 text-right"><data value="100">100</data> $</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="px-4 py-3 text-left text-slate-300 font-medium" data-lang="uk">Довідка</th>
+                  <th scope="row" class="px-4 py-3 text-left text-slate-300 font-medium hidden" data-lang="en">Certificate</th>
+                  <td class="px-4 py-3 text-right"><data value="100">100</data> $</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="px-4 py-3 text-left text-slate-300 font-medium" data-lang="uk">Здача іспиту</th>
+                  <th scope="row" class="px-4 py-3 text-left text-slate-300 font-medium hidden" data-lang="en">Exam sitting</th>
+                  <td class="px-4 py-3 text-right"><data value="200">200</data> $</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="px-4 py-3 text-left text-slate-300 font-medium" data-lang="uk">Диплом</th>
+                  <th scope="row" class="px-4 py-3 text-left text-slate-300 font-medium hidden" data-lang="en">Diploma</th>
+                  <td class="px-4 py-3 text-right"><data value="500">500</data> $</td>
+                </tr>
+              </tbody>
+              
+            </table>
+          </div>
+
+          <ul class="mt-6 space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span aria-hidden="true">ℹ️</span><span data-lang="uk">Фактичні витрати залежать від індивідуальних обставин</span><span class="hidden" data-lang="en">Actual fees may vary</span></li>
+            <li class="flex items-center gap-2"><span aria-hidden="true">ℹ️</span><span data-lang="uk">Оплата здійснюється за потреби, частинами</span><span class="hidden" data-lang="en">Pay only if/when applicable</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Callouts -->
+      <div class="mt-10 grid md:grid-cols-3 gap-4">
+        <div class="glass rounded-xl p-4 text-sm">
+          <div class="font-semibold mb-1" data-lang="uk">Пільги та стипендії</div>
+          <div class="font-semibold mb-1 hidden" data-lang="en">Grants & Scholarships</div>
+          <p class="text-slate-300" data-lang="uk">За наявності — можуть зменшити витрати. Уточнюйте у приймальній комісії.</p>
+          <p class="text-slate-300 hidden" data-lang="en">Where available, these may reduce costs. Check with admissions.</p>
+        </div>
+        <div class="glass rounded-xl p-4 text-sm">
+          <div class="font-semibold mb-1" data-lang="uk">Міжнародні студенти</div>
+          <div class="font-semibold mb-1 hidden" data-lang="en">International Students</div>
+          <p class="text-slate-300" data-lang="uk">Додаткові вимоги/документи можуть впливати на підсумкову суму.</p>
+          <p class="text-slate-300 hidden" data-lang="en">Additional docs or requirements may affect final costs.</p>
+        </div>
+        <div class="glass rounded-xl p-4 text-sm">
+          <div class="font-semibold mb-1" data-lang="uk">Запитання?</div>
+          <div class="font-semibold mb-1 hidden" data-lang="en">Questions?</div>
+          <p class="text-slate-300" data-lang="uk">Залишіть заявку на консультацію — ми допоможемо обрати найкращий варіант.</p>
+          <p class="text-slate-300 hidden" data-lang="en">Request a consultation — we’ll help you choose the best option.</p>
+        </div>
+      </div>
+
+      <!-- CTA / Form -->
+      <div id="apply" class="mt-12">
+        <form id="applyForm" class="max-w-3xl mx-auto glass rounded-2xl p-6 md:p-8 space-y-4" novalidate>
+          <h3 class="serif text-2xl font-bold" data-lang="uk">Подати заявку</h3>
+          <h3 class="serif text-2xl font-bold hidden" data-lang="en">Apply now</h3>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm mb-1" data-lang="uk">Ім’я та прізвище</label>
+              <label for="name" class="block text-sm mb-1 hidden" data-lang="en">Full name</label>
+              <input id="name" name="name" type="text" required class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 outline-none focus:border-white/30" placeholder="Марія Іваненко" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm mb-1">Email</label>
+              <input id="email" name="email" type="email" required class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 outline-none focus:border-white/30" placeholder="name@example.com" />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="program" class="block text-sm mb-1" data-lang="uk">Освітня програма</label>
+              <label for="program" class="block text-sm mb-1 hidden" data-lang="en">Program</label>
+              <input id="program" name="program" type="text" class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 outline-none focus:border-white/30" placeholder="Приклад: Мистецтвознавство" />
+            </div>
+            <div>
+              <label for="track" class="block text-sm mb-1" data-lang="uk">Формат навчання</label>
+              <label for="track" class="block text-sm mb-1 hidden" data-lang="en">Study track</label>
+              <select id="track" name="track" class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 outline-none focus:border-white/30">
+                <option value="contract" data-lang="uk">Контракт</option>
+                <option value="contract" class="hidden" data-lang="en">Contract</option>
+                <option value="free" data-lang="uk">Безкоштовне навчання</option>
+                <option value="free" class="hidden" data-lang="en">Free tuition</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm mb-1" data-lang="uk">Коментар</label>
+            <label for="message" class="block text-sm mb-1 hidden" data-lang="en">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 outline-none focus:border-white/30" placeholder="Коротко опишіть ваші питання або ситуацію"></textarea>
+          </div>
+
+          <div class="flex items-center justify-between gap-3">
+            <p id="formStatus" class="text-sm"></p>
+            <button type="submit" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 glass hover:bg-white/10 transition">
+              <span data-lang="uk">Надіслати</span>
+              <span class="hidden" data-lang="en">Send</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 opacity-80" aria-hidden="true"><path d="M13.5 4.5a.75.75 0 000 1.5h4.19l-9.72 9.72a.75.75 0 101.06 1.06l9.72-9.72v4.19a.75.75 0 001.5 0v-6.75a.75.75 0 00-.75-.75h-6.75z"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-400 flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> <span data-lang="uk">Міжнародний Християнський Гуманітарний Університет</span><span class="hidden" data-lang="en">International Christian Humanitarian University</span></div>
+      <div class="flex items-center gap-3">
+        <a href="index.html#contact" class="hover:text-slate-200" data-lang="uk">Контакти</a>
+        <a href="index.html#contact" class="hover:text-slate-200 hidden" data-lang="en">Contacts</a>
+        <span class="opacity-30" aria-hidden="true">•</span>
+        <a href="terms.html" class="hover:text-slate-200" data-lang="uk">Умови навчання</a>
+        <a href="terms.html" class="hover:text-slate-200 hidden" data-lang="en">Study Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="no-js-note max-w-6xl mx-auto px-4 py-3 text-sm text-amber-300">
+      Для повної роботи перемикача мов і надсилання форми потрібен JavaScript.
+    </div>
+  </noscript>
+
+  <script>
+    // ===== I18N toggle =====
+    const els = Array.from(document.querySelectorAll('[data-lang]'));
+    const btnUK = document.getElementById('btn-uk');
+    const btnEN = document.getElementById('btn-en');
+
+    function getInitialLang() {
+      const url = new URL(window.location.href);
+      const qs = url.searchParams.get('lang');
+      if (qs === 'uk' || qs === 'en') return qs;
+      const stored = localStorage.getItem('lang');
+      if (stored === 'uk' || stored === 'en') return stored;
+      return 'uk';
+    }
+
+    function setLang(lang, pushState = true) {
+      const clamped = (lang === 'en') ? 'en' : 'uk';
+      localStorage.setItem('lang', clamped);
+      if (pushState) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', clamped);
+        history.replaceState(null, '', url.toString());
+      }
+      els.forEach(el => {
+        const show = el.getAttribute('data-lang') === clamped;
+        el.classList.toggle('hidden', !show);
+      });
+      btnUK.classList.toggle('bg-white/10', clamped === 'uk');
+      btnUK.classList.toggle('font-semibold', clamped === 'uk');
+      btnUK.setAttribute('aria-pressed', String(clamped === 'uk'));
+
+      btnEN.classList.toggle('bg-white/10', clamped === 'en');
+      btnEN.classList.toggle('font-semibold', clamped === 'en');
+      btnEN.setAttribute('aria-pressed', String(clamped === 'en'));
+
+      document.documentElement.lang = (clamped === 'uk') ? 'uk' : 'en';
+      document.title = (clamped === 'uk')
+        ? 'Умови навчання — Міжнародний Християнський Гуманітарний Університет'
+        : 'Study Terms — International Christian Humanitarian University';
+    }
+
+    btnUK.addEventListener('click', () => setLang('uk'));
+    btnEN.addEventListener('click', () => setLang('en'));
+    setLang(getInitialLang(), false);
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== Form submission (email) =====
+    // Works two ways:
+    // 1) If FORMSPREE_ENDPOINT set to your endpoint, sends POST to Formspree
+    // 2) Otherwise falls back to 'mailto:' composing an email with the form data
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnnzydww";
+    const APPLY_EMAIL = "admissions@example.com"; // replace with your email
+    const form = document.getElementById('applyForm');
+    const statusEl = document.getElementById('formStatus');
+
+    function setStatus(type, msg) {
+      statusEl.className = 'text-sm px-3 py-2 rounded-lg ' + (type === 'success' ? 'success' : type === 'error' ? 'error' : 'glass');
+      statusEl.textContent = msg;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      setStatus('', (document.documentElement.lang === 'uk') ? 'Надсилаємо…' : 'Sending…');
+
+      const data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        program: form.program.value.trim(),
+        track: form.track.value,
+        message: form.message.value.trim(),
+        page: window.location.href
+      };
+
+      // basic validation
+      if (!data.name || !data.email) {
+        setStatus('error', (document.documentElement.lang === 'uk') ? 'Будь ласка, заповніть ім’я та email.' : 'Please fill in name and email.');
+        return;
+      }
+
+      // Try Formspree first if configured
+      if (FORMSPREE_ENDPOINT) {
+        try {
+          const resp = await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          if (resp.ok) {
+            form.reset();
+            setStatus('success', (document.documentElement.lang === 'uk') ? 'Заявку надіслано. Дякуємо!' : 'Application sent. Thank you!');
+            return;
+          } else {
+            // fall through to mailto
+            console.warn('Formspree error', await resp.text());
+          }
+        } catch (err) {
+          console.warn('Formspree exception', err);
+        }
+      }
+
+      // Fallback: compose a mailto
+      const subject = encodeURIComponent((document.documentElement.lang === 'uk')
+        ? 'Заявка з сайту — Міжнародний Християнський Гуманітарний Університет'
+        : 'Application from website — International Christian Humanitarian University');
+      const bodyLines = [
+        `Ім’я: ${data.name}`,
+        `Email: ${data.email}`,
+        `Програма: ${data.program || '-'}`,
+        `Формат: ${data.track}`,
+        `Повідомлення: ${data.message || '-'}`,
+        `Сторінка: ${data.page}`
+      ];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      const mailto = `mailto:${APPLY_EMAIL}?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+      setStatus('success', (document.documentElement.lang === 'uk') ? 'Відкрито поштовий клієнт для надсилання.' : 'Opened your email client.');
+    });
+  </script>
+</body>
+</html>
