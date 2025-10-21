@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Програми — Міжнародний Християнський Гуманітарний Університет. Нові освітні програми з'являться незабаром." />
+  <meta name="description" content="Абітурієнту — Міжнародний Християнський Гуманітарний Університет. Як подати заявку, вимоги, документи, етапи вступу, вартість і пільги." />
   <meta name="color-scheme" content="dark light">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <title>Програми — Міжнародний Християнський Гуманітарний Університет</title>
-
+  <title>Абітурієнту — Міжнародний Християнський Гуманітарний Університет</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9S93H4636"></script>
   <script>
@@ -21,79 +19,55 @@
     gtag('js', new Date());
     gtag('config', 'G-K9S93H4636');
   </script>
-
   <style>
     :root {
       --bg-start: #0f172a; /* slate-900 */
       --bg-end: #1e293b;   /* slate-800 */
       --card-bg: rgba(255,255,255,0.06);
       --card-stroke: rgba(255,255,255,0.12);
+      --accent: #eab308;   /* amber */
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans'; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
     .serif { font-family: 'Playfair Display', Georgia, ui-serif, serif; }
     .glass { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--card-stroke); }
     .grad-bg { background: radial-gradient(1200px 600px at 10% -10%, #33415533, transparent), linear-gradient(160deg, var(--bg-start), var(--bg-end)); }
-    /* degree label */
-    .degree {
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.07);
-      padding: 0.2rem 0.55rem;
-      border-radius: .6rem;
-      font-size: .75rem;
-      letter-spacing: .01em;
-      color: #e5e7eb;
-    }
-    /* smoother language toggle */
-    [data-lang] { transition: opacity .15s ease; }
-    .hidden { opacity: 0; pointer-events: none; position: absolute; }
+    .badge { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); }
+    .notice { border-left: 3px solid var(--accent); }
   </style>
 </head>
-
 <body class="grad-bg text-slate-100 min-h-screen flex flex-col">
-
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 group" aria-label="На головну">
-        <div class="size-9 rounded-xl bg-white/10 grid place-items-center group-hover:bg-white/20 transition">
-          <span class="serif text-lg">МХ</span>
-        </div>
+        <div class="size-9 rounded-xl bg-white/10 grid place-items-center group-hover:bg-white/20 transition"><span class="serif text-lg">МХ</span></div>
         <div class="leading-tight">
           <div class="font-semibold" data-lang="uk">Міжнародний Християнський Гуманітарний Університет</div>
           <div class="font-semibold hidden" data-lang="en">International Christian Humanitarian University</div>
         </div>
       </a>
-      <nav class="hidden md:flex items-center gap-1" aria-label="Основна навігація">
-        <a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Про нас</a>
-        <a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">About</a>
-
-        <a href="programs.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold" data-lang="uk">Програми</a>
-        <a href="programs.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold hidden" data-lang="en">Programs</a>
-
-        <a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Абітурієнту</a>
-        <a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Admissions</a>
-
-        <a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Проєкти</a>
-        <a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Projects</a>
-
-        <a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Новини</a>
-        <a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">News</a>
-
-        <a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Умови навчання</a>
-        <a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Study Terms</a>
-
-        <div class="w-px h-6 bg-white/10 mx-1" aria-hidden="true"></div>
-
-        <div class="flex items-center gap-1 glass rounded-xl p-1" role="group" aria-label="Перемикач мови">
-          <button id="btn-uk" type="button" class="px-3 py-1.5 text-xs rounded-lg bg-white/10 font-semibold" aria-pressed="true">UA</button>
-          <button id="btn-en" type="button" class="px-3 py-1.5 text-xs rounded-lg hover:bg-white/10" aria-pressed="false">EN</button>
-        </div>
-      </nav>
+      <nav class="hidden md:flex items-center gap-1" aria-label="Основна навігація"><a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Про нас</a>
+<a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">About</a>
+<a href="programs.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Програми</a>
+<a href="programs.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Programs</a>
+<a href="admissions.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold" data-lang="uk">Абітурієнту</a>
+<a href="admissions.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold hidden" data-lang="en">Admissions</a>
+<a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Проєкти</a>
+<a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Projects</a>
+<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Новини</a>
+<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">News</a>
+<a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Умови навчання</a>
+<a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Study Terms</a>
+<div class="w-px h-6 bg-white/10 mx-1" aria-hidden="true"></div>
+<div class="flex items-center gap-1 glass rounded-xl p-1" role="group" aria-label="Перемикач мови">
+  <button id="btn-uk" type="button" class="px-3 py-1.5 text-xs rounded-lg bg-white/10 font-semibold" aria-pressed="true">UA</button>
+  <button id="btn-en" type="button" class="px-3 py-1.5 text-xs rounded-lg hover:bg-white/10" aria-pressed="false">EN</button>
+</div>
+</nav>
     </div>
   </header>
-
+  
   <!-- Hero -->
   <section class="relative pt-20 md:pt-24 pb-6">
     <div class="max-w-6xl mx-auto px-4">
