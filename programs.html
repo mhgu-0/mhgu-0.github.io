@@ -11,10 +11,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
- <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9S93H4636"></script>
   <script>
-    window.dataLayer = window.dataLayer  [];
+    window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-K9S93H4636');
@@ -46,24 +46,25 @@
           <div class="font-semibold hidden" data-lang="en">International Christian Humanitarian University</div>
         </div>
       </a>
-      <nav class="hidden md:flex items-center gap-1" aria-label="Основна навігація"><a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Про нас</a>
-<a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">About</a>
-<a href="programs.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold" data-lang="uk">Програми</a>
-<a href="programs.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold hidden" data-lang="en">Programs</a>
-<a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Абітурієнту</a>
-<a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Admissions</a>
-<a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Проєкти</a>
-<a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Projects</a>
-<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Новини</a>
-<a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">News</a>
-<a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Умови навчання</a>
-<a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Study Terms</a>
-<div class="w-px h-6 bg-white/10 mx-1" aria-hidden="true"></div>
-<div class="flex items-center gap-1 glass rounded-xl p-1" role="group" aria-label="Перемикач мови">
-  <button id="btn-uk" type="button" class="px-3 py-1.5 text-xs rounded-lg bg-white/10 font-semibold" aria-pressed="true">UA</button>
-  <button id="btn-en" type="button" class="px-3 py-1.5 text-xs rounded-lg hover:bg-white/10" aria-pressed="false">EN</button>
-</div>
-</nav>
+      <nav class="hidden md:flex items-center gap-1" aria-label="Основна навігація">
+        <a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Про нас</a>
+        <a href="about.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">About</a>
+        <a href="programs.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold" data-lang="uk">Програми</a>
+        <a href="programs.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-semibold hidden" data-lang="en">Programs</a>
+        <a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Абітурієнту</a>
+        <a href="admissions.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Admissions</a>
+        <a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Проєкти</a>
+        <a href="projects.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Projects</a>
+        <a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Новини</a>
+        <a href="news.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">News</a>
+        <a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm" data-lang="uk">Умови навчання</a>
+        <a href="terms.html" class="px-3 py-2 rounded-lg hover:bg-white/10 text-sm hidden" data-lang="en">Study Terms</a>
+        <div class="w-px h-6 bg-white/10 mx-1" aria-hidden="true"></div>
+        <div class="flex items-center gap-1 glass rounded-xl p-1" role="group" aria-label="Перемикач мови">
+          <button id="btn-uk" type="button" class="px-3 py-1.5 text-xs rounded-lg bg-white/10 font-semibold" aria-pressed="true">UA</button>
+          <button id="btn-en" type="button" class="px-3 py-1.5 text-xs rounded-lg hover:bg-white/10" aria-pressed="false">EN</button>
+        </div>
+      </nav>
     </div>
   </header>
   
@@ -79,7 +80,7 @@
     </div>
   </section>
 
-  <!-- Faculties (polished) -->
+  <!-- Faculties -->
   <section id="faculties" class="py-6">
     <div class="max-w-6xl mx-auto px-4">
 
@@ -109,8 +110,8 @@
               <div class="font-semibold" data-lang="uk">Богослов’я</div>
               <div class="font-semibold hidden" data-lang="en">Theology</div>
               <div class="mt-1">
-                <span class="degree" data-lang="uk">Ступінь: Бакалавр / Магістр</span>
-                <span class="degree hidden" data-lang="en">Degree: Bachelor / Master</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200" data-lang="uk">Ступінь: Бакалавр / Магістр</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200 hidden" data-lang="en">Degree: Bachelor / Master</span>
               </div>
               <p class="text-slate-300 mt-2" data-lang="uk">Дослідження Біблії, історії християнства, порівняльного релігієзнавства. Основа для служіння, викладання та духовного наставництва.</p>
               <p class="text-slate-300 mt-2 hidden" data-lang="en">Study of Scripture, Christian history, and comparative religion. Foundations for ministry, teaching, and spiritual mentorship.</p>
@@ -120,8 +121,8 @@
               <div class="font-semibold" data-lang="uk">Християнська етика та філософія релігії</div>
               <div class="font-semibold hidden" data-lang="en">Christian Ethics & Philosophy of Religion</div>
               <div class="mt-1">
-                <span class="degree" data-lang="uk">Ступінь: Магістр</span>
-                <span class="degree hidden" data-lang="en">Degree: Master</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200" data-lang="uk">Ступінь: Магістр</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200 hidden" data-lang="en">Degree: Master</span>
               </div>
               <p class="text-slate-300 mt-2" data-lang="uk">Глибоке осмислення моральних засад сучасного світу крізь християнську перспективу.</p>
               <p class="text-slate-300 mt-2 hidden" data-lang="en">Deep engagement with moral foundations of today’s world through a Christian lens.</p>
@@ -131,8 +132,8 @@
               <div class="font-semibold" data-lang="uk">Місіонерське служіння та міжкультурна комунікація</div>
               <div class="font-semibold hidden" data-lang="en">Mission & Intercultural Communication</div>
               <div class="mt-1">
-                <span class="degree" data-lang="uk">Ступінь: Бакалавр</span>
-                <span class="degree hidden" data-lang="en">Degree: Bachelor</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200" data-lang="uk">Ступінь: Бакалавр</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200 hidden" data-lang="en">Degree: Bachelor</span>
               </div>
               <p class="text-slate-300 mt-2" data-lang="uk">Практичні навички служіння в різних культурах і соціальних контекстах.</p>
               <p class="text-slate-300 mt-2 hidden" data-lang="en">Practical skills for ministry across cultures and social contexts.</p>
@@ -152,8 +153,8 @@
               <div class="font-semibold" data-lang="uk">Психологія і християнське консультування</div>
               <div class="font-semibold hidden" data-lang="en">Psychology & Christian Counseling</div>
               <div class="mt-1">
-                <span class="degree" data-lang="uk">Ступінь: Бакалавр / Магістр</span>
-                <span class="degree hidden" data-lang="en">Degree: Bachelor / Master</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200" data-lang="uk">Ступінь: Бакалавр / Магістр</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200 hidden" data-lang="en">Degree: Bachelor / Master</span>
               </div>
               <p class="text-slate-300 mt-2" data-lang="uk">Психологічна допомога на основі духовних принципів і людської гідності.</p>
               <p class="text-slate-300 mt-2 hidden" data-lang="en">Psychological care grounded in spiritual principles and human dignity.</p>
@@ -163,8 +164,8 @@
               <div class="font-semibold" data-lang="uk">Соціальна робота і волонтерське служіння</div>
               <div class="font-semibold hidden" data-lang="en">Social Work & Volunteer Service</div>
               <div class="mt-1">
-                <span class="degree" data-lang="uk">Ступінь: Бакалавр</span>
-                <span class="degree hidden" data-lang="en">Degree: Bachelor</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200" data-lang="uk">Ступінь: Бакалавр</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200 hidden" data-lang="en">Degree: Bachelor</span>
               </div>
               <p class="text-slate-300 mt-2" data-lang="uk">Підготовка фахівців для підтримки вразливих груп і розвитку громад.</p>
               <p class="text-slate-300 mt-2 hidden" data-lang="en">Training professionals to support vulnerable groups and strengthen communities.</p>
@@ -174,8 +175,8 @@
               <div class="font-semibold" data-lang="uk">Міжнародні відносини і миротворчість</div>
               <div class="font-semibold hidden" data-lang="en">International Relations & Peacebuilding</div>
               <div class="mt-1">
-                <span class="degree" data-lang="uk">Ступінь: Магістр</span>
-                <span class="degree hidden" data-lang="en">Degree: Master</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200" data-lang="uk">Ступінь: Магістр</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200 hidden" data-lang="en">Degree: Master</span>
               </div>
               <p class="text-slate-300 mt-2" data-lang="uk">Дипломатія, гуманітарна співпраця та міжкультурний діалог.</p>
               <p class="text-slate-300 mt-2 hidden" data-lang="en">Diplomacy, humanitarian cooperation, and intercultural dialogue.</p>
@@ -195,8 +196,8 @@
               <div class="font-semibold" data-lang="uk">Журналістика і медіакомунікації (етичний фокус)</div>
               <div class="font-semibold hidden" data-lang="en">Journalism & Media Communications (Ethics Focus)</div>
               <div class="mt-1">
-                <span class="degree" data-lang="uk">Ступінь: Бакалавр</span>
-                <span class="degree hidden" data-lang="en">Degree: Bachelor</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200" data-lang="uk">Ступінь: Бакалавр</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200 hidden" data-lang="en">Degree: Bachelor</span>
               </div>
               <p class="text-slate-300 mt-2" data-lang="uk">Навички правдивого, відповідального і гуманного висвітлення подій.</p>
               <p class="text-slate-300 mt-2 hidden" data-lang="en">Skills for truthful, responsible, and humane reporting.</p>
@@ -206,8 +207,8 @@
               <div class="font-semibold" data-lang="uk">Мистецтво, культура та духовні традиції</div>
               <div class="font-semibold hidden" data-lang="en">Art, Culture & Spiritual Traditions</div>
               <div class="mt-1">
-                <span class="degree" data-lang="uk">Ступінь: Бакалавр</span>
-                <span class="degree hidden" data-lang="en">Degree: Bachelor</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200" data-lang="uk">Ступінь: Бакалавр</span>
+                <span class="inline-block border border-white/20 bg-white/10 rounded-lg px-2 py-0.5 text-xs tracking-wide text-slate-200 hidden" data-lang="en">Degree: Bachelor</span>
               </div>
               <p class="text-slate-300 mt-2" data-lang="uk">Дослідження мистецьких форм як носіїв духовності та культурної пам’яті.</p>
               <p class="text-slate-300 mt-2 hidden" data-lang="en">Exploring art forms as carriers of spirituality and cultural memory.</p>
@@ -218,7 +219,7 @@
     </div>
   </section>
 
-  <!-- CTA (відновлений блок) -->
+  <!-- CTA -->
   <section class="py-2">
     <div class="max-w-6xl mx-auto px-4 glass rounded-2xl p-6 md:p-8">
       <div class="grid md:grid-cols-2 gap-4 items-center">
